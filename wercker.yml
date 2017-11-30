@@ -1,0 +1,23 @@
+box: openjdk
+build:
+  steps:
+    - script:
+            name: update apt-get
+            code: apt-get update -y
+    - script:
+            name: install maven
+            code: apt-get install maven
+    - script:
+            name: did it work
+            code: mvn -version
+push:
+  steps:
+    # Push to public docker repo
+    - internal/docker-push:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        tag: $DOCKER_TAG
+        ports: 8085
+        repository: $DOCKER_REPOSITORY
+        registry: https://index.docker.io/v2/
+        cmd: node pipeline/source/server.js
