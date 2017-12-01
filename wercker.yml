@@ -24,3 +24,4 @@ push:
         repository: $DOCKER_REPOSITORY
         registry: https://index.docker.io/v2/
         cmd: node pipeline/source/target/bin/start
+#test
