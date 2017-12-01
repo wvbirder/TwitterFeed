@@ -34,7 +34,7 @@ public class Main {
     	// Base URI the Grizzly HTTP server will listen on
     	final Optional<String> port = Optional.ofNullable(System.getenv("PORT"));
     	final Optional<String> hostName = Optional.ofNullable(System.getenv("HOSTNAME"));
-		BASE_URI = "http://" + hostName.orElse("localhost") + ":" + port.orElse("8080") + "/";
+		BASE_URI = "http://" + hostName.orElse("localhost") + ":" + port.orElse("9080") + "/";
 
         // create a resource config that scans for JAX-RS resources and providers
         // in com.example package
