@@ -10,8 +10,7 @@ build:
     - script:
             name: Did it work
             code: mvn -version
-dev:
-  steps:
-    - script:
+- script:
             name: Build the application
-            code: ./build.sh
+            code: pipeline/source/build.sh
+
