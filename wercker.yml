@@ -23,3 +23,4 @@ push:
         ports: 9080
         repository: $DOCKER_REPOSITORY
         registry: https://index.docker.io/v2/
+        cmd: sh pipeline/source/target/bin/start
