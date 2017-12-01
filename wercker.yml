@@ -13,4 +13,3 @@ build:
 - script:
             name: Build the application
             code: pipeline/source/build.sh
-
