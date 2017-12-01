@@ -2,11 +2,16 @@ box: openjdk
 build:
   steps:
     - script:
-            name: update apt-get
+            name: Update apt-get
             code: apt-get update -y
     - script:
-            name: install maven
+            name: Install maven
             code: echo Y | apt-get install maven
     - script:
-            name: did it work
+            name: Did it work
             code: mvn -version
+dev:
+  steps:
+    - script:
+            name: Build the application
+            code: pipeline/source/build.sh
