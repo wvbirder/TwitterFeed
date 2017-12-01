@@ -95,7 +95,7 @@ public class Main {
         System.out.println();
         System.out.println("Press enter to stop the server...");
         
-        System.in.read();
+    //    System.in.read();
         server.shutdown();
     }
 }
